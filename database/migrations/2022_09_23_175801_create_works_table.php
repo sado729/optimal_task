@@ -15,7 +15,7 @@ return new class extends Migration
     {
         Schema::create('works', function (Blueprint $table) {
             $table->id();
-            $table->string('wo','6');
+            $table->string('wo','6')->unique();
             $table->date('work_date');
             $table->decimal('parts_cost','8','2');
             $table->string('payment');

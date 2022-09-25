@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ImportExcelController;
+use App\Http\Controllers\WorkController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -15,3 +16,4 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::post('/import/excel', [ImportExcelController::class, 'import']);
+Route::apiResource('works', WorkController::class);
